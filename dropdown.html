@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .navbar{
+        margin:0px;
+       
+       
+       }
+       .dropdown{
+        display: inline;
+        position: relative;
+       
+       }
+       .dbtn{
+        background-color: rgb(157, 219, 196);
+        margin: 2px;
+        transition: 1sec;
+        
+       }
+        .dropdown:hover .dbtn{
+        background-color: rgb(168, 97, 133);
+       }
+       .dropdown-content{
+        display: none;
+        position: absolute;
+       }
+       .dropdown-content a{
+        text-decoration: none;
+       }
+       .dropdown:hover .dropdown-content {  
+       display: block;
+       background-color: beige;
+       transition: 2sec;
+       }
+       /* .dropdown:hover .dropdown-content {  
+       display: block;
+       background-color: beige;
+       } */
+       .dropdown-content a:hover {background-color: #037635}
+
+      
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dbtn">Dropdown </button>
+            <div class="dropdown-content">
+                <a href="https://www.youtube.com/"> HOME</a>
+                <a href="#"> Menu</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
