@@ -625,3 +625,254 @@ li.dropdown {
   color: #573bf2;
 }
 
+/* mediaqueries */
+@media screen and (min-width:1078px) and (max-width:1300px){
+  .project-img {
+  width: 100%;
+ }
+ .project-img img{
+  width: 230px;
+ }
+
+}
+
+@media screen and (max-width:1078px) and (min-width:963px){
+  .project-img {
+    grid-template-columns: auto auto auto;
+  }
+    .project-img img{
+      width:280px;
+    }
+}
+
+@media screen and (max-width:963px) and (min-width:929px) {
+  .headercontainer{
+    width: 110%;
+  }
+
+  .content1{
+    width: 70%;
+  }
+  .content1 h1{
+      font-size: 40px;
+  }
+ .seo, .portfolio-information{   
+  width: 100% ;
+  text-align: center;
+    /* display: block;  */
+ }
+ .seo-text{
+   width: 70%;
+ }
+ .seo-img img, .portfolio-img img{
+  width: 450px;
+ }
+ .project-img{
+  grid-template-columns: auto auto auto;
+ }
+ .project-img h2{
+  font-size: 15px;
+ }
+ .project-img img{
+  width: 280px;
+ }
+}
+@media screen and (max-width:929px) and (min-width:827px){
+  .project-img{
+    grid-template-columns: auto auto auto;
+    width: 100%;
+  }
+  .project-img img{
+    width: 240px;
+  }
+}
+@media screen and (max-width:827px) and (min-width:760px){
+  .content1 h1, .small-parallax-section h1{
+    font-size: 30px;
+  }
+
+  .seo-img img, .portfolio-img img{
+    width: 280px;
+    margin-top: 100px;
+  }
+  .project-img{
+        grid-template-columns: auto auto auto;
+    align-items: center;
+    min-width: 100%;
+  }
+  .project-img img{
+    width: 210px;
+  }
+
+  .customer-say{
+    max-width:855px;
+  }
+}@media screen and (max-width:760px) and (min-width:718px){
+  .headercontainer{
+    width:100%;
+  }
+  .content1,.small-parallax-section{
+    width: 100%;
+  }
+
+  .content1 h1, .small-parallax-section h1{
+    font-size: 30px;
+  }
+
+
+
+  .content1 p, .small-parallax-section p{
+    font-size: 12px;
+    margin: 0px 100px 10px 100px;
+  }
+  .search-input input{
+    padding: 5px;
+    width: 150px;
+    font-size: medium;
+  }
+  .search-input button{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .content1{
+    padding-top: 100px;
+    padding-right: 100px;
+  }
+  .content1 .readbtn,.content1 .downloadbtn, .seo-text button,.portfolio-text button, .small-parallax-section button,.next-content button{
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .wordpress-text button{
+    font-size:14px;
+    width: 150px;
+    /* padding:5px 10px; */
+  }
+  .seo-text h3, .portfolio-text h3{
+    font-size: 20px;
+  }
+
+  .seo-text p, .portfolio-text p{
+    font-size: 12px;
+  }
+  .seo-img img, .portfolio-img img{
+    width: 300px;
+    margin-top: 100px;
+  }
+  .small-parallax-section h1{
+    font-size: 40px;
+  }
+  .small-parallax-section p{
+    font-size: 12px;
+  }
+
+.project-img{
+  width: 100%;
+  grid-template-columns: auto auto;
+}
+}
+
+@media screen and (max-width:718px){
+  .headercontainer{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .proimg img{
+    width: 175px;
+  }
+}
+@media screen and (max-width:718px){
+  nav::before{
+    content:"";
+    display: none;
+  }
+
+  
+
+   nav ul{
+    /* display: grid; */
+    display: none;
+    position: absolute;
+    background-color:#fff;
+    margin-top: 30px;
+    margin-left: 100px;
+   }
+  
+  
+   .dropbtn{
+    display: block;
+   }
+
+   nav:hover ul{
+    display:grid;
+   }
+
+   .content1 p, .small-parallax-section p{
+    margin: 0px 75px 10px 75px;
+   }
+
+   .seo{
+    padding: 5px;
+   }
+   .seo-text{
+     margin: 0px 0px;
+   }
+   .seo-img img,.portfolio-img img{
+    margin: 0;
+    width: 350px;
+   }
+
+   .next-content{
+    padding: 75px 95px 2px 120px;
+   }
+
+  .project-img{
+    grid-template-columns: auto auto;
+  }
+  .proimg img{
+    width: 280px;
+  }
+
+
+  .wordpress-text h2{
+    font-size: 20px;
+  }
+  .wordpress-text button{
+    font-weight: normal;
+    font-size: 12px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width:648px){
+  .headercontainer{
+    height: 50px;
+  }
+  nav{
+    margin-top: 20px;
+  };
+
+  .seo, .portfolio{
+    width:80%;
+    display:block;
+    font-size: 12px;
+  }
+  .seo-text, .portfolio-text{
+    padding: 0;
+    margin: 0;
+  }
+   
+  /* .project-img{
+    grid-template-columns: auto;
+  } */
+  .proimg img{
+    width:100%;
+  }
+}
+
+
+
+
+
