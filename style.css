@@ -1,0 +1,627 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.headercontainer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  margin-left: -5px;
+  padding: 5px;
+  margin-top: 0%;
+  margin-right: 0%;
+  background-size: 100% 100%;
+  background-color: whitesmoke;
+}
+.logo {
+  height: auto;
+  width: 150%;
+  background-color: rgb(248, 245, 242);
+  margin-right: -6px;
+  padding: 20px;
+  background-size: 100% 100%;
+}
+span {
+  padding: 22px;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 4px;
+  margin-top: 12px;
+}
+.logo a {
+  text-decoration: none;
+  padding: 3px;
+}
+
+.navbar ul {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: right;
+  padding: 8px;
+}
+.navbar ul a {
+  padding: 9px;
+  color: rgb(6, 6, 6);
+  font-size: large;
+}
+.navbar ul a:hover {
+  color: rgb(55, 9, 239);
+}
+/* for dropdown_menu */
+li a,
+.dropbtn {
+  display: inline-block;
+  color: rgb(3, 28, 53);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  color: rgb(49, 11, 201);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 14px 18px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search {
+  margin-right: 100px;
+  width: 35px;
+  height: 55px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.search button {
+  width: 25px;
+  height: auto;
+  border: none;
+  background-color: #ffff;
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.search-input {
+  position: absolute;
+  right: 13%;
+  top: 10%;
+  background-color: #fff;
+  visibility: hidden;
+  padding: 10px;
+}
+.search:hover + .search-input {
+  visibility: visible;
+  animation: search;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes search {
+  from {
+    top: 0%;
+    right: 15%;
+  }
+
+  to {
+    top: 20%;
+    right: 15%;
+  }
+}
+
+.search-input input {
+  padding: 15px;
+  text-transform: capitalize;
+  background-color: #f5f5f5;
+  font-size: large;
+}
+
+.search-input button {
+  padding: 15px;
+  text-transform: uppercase;
+  background-color: #8b7af0;
+  font-size: large;
+}
+.content1 {
+  background-image: url("https://149842022.v2.pressablecdn.com/wp-content/uploads/sites/59/2016/03/photo-1443527216320-7e744084f5a7-1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: inherit;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.content1 h1 {
+  font-size: 60px;
+  color: #ffff;
+  margin: 0px 0px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  margin-left: 50px;
+}
+.content1 .readbtn {
+  width: 200px;
+  color: #fff;
+  background: #745cf9;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0px 8px 24px 0px;
+  padding: 13px 26px;
+  border: 2px #745cf9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content1 .readbtn:hover {
+  background-color: #573bf2;
+}
+
+.content1 .downloadbtn {
+  width: 200px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 0px 8px 24px 0px;
+  padding: 13px 26px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content1 .downloadbtn:hover {
+  background-color: #fff;
+  color: #4c4c4c;
+}
+.content1 p {
+  font-size: 16px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+}
+/* CSS FOR SEO-FRIENDLY */
+
+.seo {
+  min-width: 200px;
+  padding: 15px 15px;
+  display: flex;
+  background-color: #fff;
+}
+
+.seo-img img {
+  width: 535px;
+  margin-top: 25px;
+}
+
+.seo-text {
+  margin-top: 30px;
+  margin-left: 50px;
+  text-align: center;
+  color: #8c979e;
+  width: 500px;
+  padding: 10px;
+  line-height: 1.96;
+  text-transform: uppercase;
+}
+
+.seo-text h3 {
+  color: #4c4c4c;
+  font-weight: lighter;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.seo-text p {
+  font-weight: lighter;
+  font-size: 14px;
+  text-transform: lowercase;
+  justify-content: center;
+  text-align: justify;
+  word-spacing: 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seo-text button {
+  width: 200px;
+  color: #fff;
+  background: #745cf9;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px 8px 24px 0px;
+  padding: 13px 26px;
+  border: 2px #745cf9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.seo-text button:hover {
+  background-color: #573bf2;
+  opacity: 1;
+}
+.portfolio-information {
+  background-color: #f5f5f5;
+  display: flex;
+}
+
+.portfolio-text {
+  width: 100%;
+  padding: 10px;
+  margin-top: 80px;
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
+.portfolio-text h3 {
+  color: #4c4c4c;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.portfolio-text p {
+  color: #8c979e;
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-text button {
+  width: 200px;
+  background-color: #745cf9;
+  border: 2px solid #745cf9;
+  color: #ffff;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px 8px 24px 0;
+  padding: 13px 26px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.portfolio-text button:hover {
+  background-color: #573bf2;
+}
+
+.portfolio-img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.portfolio-img img {
+  width: 535px;
+}
+.small-parallax-section {
+  /* background: transparent; */
+  background-image: url("https://149842022.v2.pressablecdn.com/wp-content/uploads/sites/59/2016/12/photo-1452723312111-3a7d0db0e024.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  text-align: center;
+  padding: 50px;
+
+  max-width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.small-parallax-section h1 {
+  text-transform: capitalize;
+  font-size: 60px;
+  font-weight: lighter;
+  color: #fff;
+  margin: 150px 0px 0px 0px;
+}
+
+.small-parallax-section p {
+  font-size: 14px;
+  color: #fff;
+  margin: 20px 140px;
+  display: flex;
+  flex-direction: wrap;
+}
+
+.parallax-section button {
+  width: 200px;
+  padding: 13px 26px;
+  background-color: #745cf9;
+  border: 2px solid #745cf9;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.small-parallax-section button:hover {
+  background-color: #573bf2;
+}
+/* CSS FOR NEXT-CONTENT */
+
+.next-content {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 100px 120px 5px 150px;
+  justify-content: center;
+}
+
+.next-content h3 {
+  font-size: 30px;
+  color: #0e1015;
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin: 0 5px 0px 24px;
+}
+
+.next-content p {
+  font-size: 14px;
+  color: #8c979e;
+  margin: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.next-content button {
+  width: 200px;
+  padding: 13px 26px;
+  margin: 20px;
+  background-color: #745cf9;
+  border: #745cf9;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.next-content button:hover {
+  background-color: #573bf2;
+}
+
+/* CSS FOR MOUNTAIN-IMG */
+
+.mountain-img {
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.mountain-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS FOR PROJECTS */
+
+.latest-projects {
+  background-color: #0e1015;
+  text-align: center;
+  padding: 25px;
+  position: inherit;
+}
+
+.latest-projects h2 {
+  color: #fff;
+  font-weight: lighter;
+}
+
+.latest-projects p {
+  color: #fff;
+  margin: 20px;
+}
+
+.project-img {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 30px;
+  width: 49%;
+  position: inherit;
+}
+
+.project-img img {
+  width: 300px;
+  position: inherit;
+}
+
+.project-img h2 {
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 100px;
+  display: none;
+}
+
+.proimg img:hover {
+  opacity: 0.5;
+}
+
+.proimg:hover h2 {
+  animation-name: projectTitle;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  display: block;
+}
+
+@keyframes projectTitle {
+  from {
+    margin-top: 0px;
+    margin-left: 100px;
+  }
+
+  to {
+    margin-top: -110px;
+    margin-left: 100px;
+  }
+}
+
+/* CSS FOR CUSTOMERS */
+
+.customer-say {
+  background-image: url("https://149842022.v2.pressablecdn.com/wp-content/uploads/sites/59/2016/12/photo-1451417379553-15d8e8f49cde.jpg");
+  /* background: transparent; */
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.customer-say h2 {
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: lighter;
+  padding: 20px;
+  align-items: center;
+}
+
+.customerinfo {
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  /* width: 50%; */
+  /* height: auto; */
+}
+
+.customerinfo p {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  font: 14px;
+  width: 100%;
+  padding: 20px;
+}
+
+.customerinfo img {
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.wordpress-text {
+  background-color: #f5f5f5;
+  display: flex;
+  text-align: center;
+  padding: 100px;
+}
+
+.wordpress-text h2 {
+  font-size: 30px;
+}
+
+.wordpress-text button {
+  padding: 10px;
+  width: 200px;
+  text-transform: uppercase;
+  margin-left: 15px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #745cf9;
+  border: none;
+  outline: 2px solid #745cf9;
+  cursor: pointer;
+}
+
+/* CSS FOR FOOTER */
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #0e1015;
+  color: #fff;
+  padding: 50px 10px 10px 10px;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #8c979e;
+  font-weight: bold;
+}
+
+.footer a::active {
+  color: #573bf2;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.footer-icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer-icons .fa {
+  font-size: 20px;
+  padding: 5px;
+  color: #fff;
+}
+
+.fa:hover {
+  color: #573bf2;
+}
+
