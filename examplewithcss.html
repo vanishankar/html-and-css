@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce site</title>
+  <style>
+    /* CSS Styles */
+    .product {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: beige;
+    }
+    .product img {
+      max-width:40%;
+      height: auto;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+  <div id="product-list"></div>
+  <script>
+    // JavaScript
+    const products = [
+      { name: 'Product A', price: 10, image: 'http://www.pngall.com/wp-content/uploads/2016/03/Vegetable-Free-PNG-Image.png' },
+      { name: 'Product B', price: 20, image: 'http://purepng.com/public/uploads/large/purepng.com-vegetablespotatocarrotbowlvegetable-961524597258qqcas.png' },
+      { name: 'Product C', price: 30, image: 'http://pluspng.com/img-png/vegetable-png-more-view-2406.png' },
+    ];
+    const productList = document.getElementById('product-list');
+    products.forEach((product) => {
+      const productDiv = document.createElement('div');
+      productDiv.classList.add('product');
+      productDiv.innerHTML = `
+        <h2>${product.name}</h2>
+        <img src="${product.image}" alt="${product.name}">
+        <p>$${product.price}</p>
+      `;
+      productList.appendChild(productDiv);
+    });
+  </script>
+</body>
+</html>
+<!-- const products = [...]: This creates an array of objects called "products", each with a "name" and "price" property.
+
+    const productList = document.getElementById('product-list');: This assigns the product list div to the productList variable.
+
+    products.forEach((product) => {...}: This loop iterates over each product in the array and creates a new div element for each one.
+
+    document.createElement('div'): This function creates a new div element.
+
+    productDiv.classList.add('product'): This line adds the "product" class to the div element, which sets the CSS styles.
+
+    productDiv.innerHTML = <h2>${product.name}</h2><p>$${product.price}</p>;: This line sets the contents of the div element to the product name and price.
+
+    productList.appendChild(productDiv);: This line appends the product div to the product list div. -->
+    
