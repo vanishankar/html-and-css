@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+	<form id="login-form">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+		<input type="submit" value="Login">
+		<button id="signin-button">Sign in with Google</button>
+	</form>
+
+	<table id="user-table">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Password</th>
+                <th>Actions</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+	<script>
+		$(document).ready(function() {
+			$("#login-form").submit(function(e) {
+				e.preventDefault();
+				var email = $("#email").val();
+				var password = $("#password").val();
+				var user = {
+					email: email,
+					password: password
+				};
+				saveUser(user);
+				$("#login-form")[0].reset();
+			});
+
+			$("#signin-button").click(function(e) {
+				e.preventDefault();
+				// TODO: Implement sign in action
+			});
+
+			loadUsers();
+		});
+
+		function saveUser(user) {
+			var users = getUsers();
+			users.push(user);
+			localStorage.setItem("users", JSON.stringify(users));
+			loadUsers();
+		}
+
+		function getUsers() {
+			var users = localStorage.getItem("users");
+			if (!users) {
+				return [];
+			}
+			return JSON.parse(users);
+		}
+
+		function updateUser(index, user) {
+			var users = getUsers();
+			users[index] = user;
+			localStorage.setItem("users", JSON.stringify(users));
+			loadUsers();
+		}
+
+		function deleteUser(index) {
+			var users = getUsers();
+			users.splice(index, 1);
+			localStorage.setItem("users", JSON.stringify(users));
+			loadUsers();
+		}
+
+		function loadUsers() {
+			var users = getUsers();
+			var tableBody = $("#user-table tbody");
+			tableBody.empty();
+			for (var i = 0; i < users.length; i++) {
+				var user = users[i];
+				var row = $("<tr>");
+				row.append($("<td>").text(user.email));
+				row.append($("<td>").text(user.password));
+				var editButton = $("<button>").text("Edit");
+				editButton.click(function() {
+					var index = $(this).closest("tr").index();
+					var users = getUsers();
+					var user = users[index];
+					var newEmail = prompt("Enter a new email", user.email);
+					if (newEmail !== null) {
+						var newPassword = prompt("Enter a new password", user.password);
+						if (newPassword !== null) {
+							user.email = newEmail;
+							user.password = newPassword;
+							updateUser(index, user);
+						}
+					}
+				});
+				row.append($("<td>").append(editButton));
+				var deleteButton = $("<button>").text("Delete");
+				deleteButton.click(function() {
+					var index = $(this).closest("tr").index();
+					deleteUser(index);
+				});
+				row.append($("<td>").append(deleteButton));
+				tableBody.append(row);
+			}
+		}
+	</script>
+<!-- When a user visits a website that uses a CDN, the files (such as the jQuery library) can be stored in the user's browser cache after the first visit. This can make subsequent visits to the website faster because the files don't need to be downloaded again from the server, but rather can be loaded from the local cache on the user's device. -->
+<!-- Query library:
+The jQuery library is a set of pre-written code that makes it easier to write JavaScript for websites. When you visit a website that uses jQuery, the files (like the jQuery library) can be stored in your web browser's cache. This can make the website load faster because it doesn't have to download the files from the server every time you visit.
+
+(document).ready() function:
+The $(document).ready() function is used in the code to wait until the web page has fully loaded before running any JavaScript code. Once the web page has loaded, the function will run some code that does things when you click on buttons or fill out a form.
+
+saveUser() function:
+When you fill out the login form on the website, the saveUser() function takes the email and password you entered and saves it to your browser's memory. It then refreshes the website to show the new user.
+
+getUsers() function:
+The getUsers() function retrieves the list of users that are saved in your browser's memory. If there are no users stored, it returns an empty list. If there are users, it shows them in a table on the website.
+
+updateUser() function:
+The updateUser() function lets you change a user's email or password. When you click the "Edit" button next to a user in the table, it opens up a prompt box where you can enter new information. If you enter new information, the updateUser() function saves it to your browser's memory and refreshes the website to show the changes.
+
+deleteUser() function:
+The deleteUser() function lets you delete a user from the list. When you click the "Delete" button next to a user in the table, it removes that user from your browser's memory and refreshes the website to show the updated list.
+
+loadUsers() function:
+The loadUsers() function shows the list of users in a table on the website. It retrieves the list of users from your browser's memory and loops through them to create a new row for each user in the table. It also adds buttons for editing or deleting each user. When you click the edit or delete button, it runs the appropriate function to make changes to the list in your browser's memory. -->
